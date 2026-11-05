@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Compile
+        run: python -m compileall -q src tests
+      - name: Test
+        run: pytest -q
+      - name: Validate dataset and preprocessing
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from src.data import load_dataset, prepare_data
+          frame = load_dataset(Path("data/DateFruit_Dataset.csv"))
+          assert frame.shape == (898, 35), frame.shape
+          data = prepare_data(frame, seed=42)
+          assert data["x_train"].shape == (628, 34)
+          assert data["x_validation"].shape == (135, 34)
+          assert data["x_test"].shape == (135, 34)
+          assert len(data["class_names"]) == 7
+          print("Dataset and preprocessing validation passed.")
+          PY
