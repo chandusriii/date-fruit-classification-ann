@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1020" width="1800" height="1020" role="img" aria-labelledby="title desc"><g transform="scale(1.5)">
 <title id="title">Date Fruit ANN architecture</title><desc id="desc">34 input features, two hidden layers with 64 neurons each, and seven output class logits.</desc>
 <defs><style>
 .bg{fill:#101827}.panel{fill:#172338;stroke:#33445f;stroke-width:2}.label{fill:#e8eef8;font:600 25px Arial}.small{fill:#aebdd1;font:18px Arial}.node{fill:#203c5c;stroke:#79b8ef;stroke-width:3}.hidden{fill:#294a55;stroke:#76d4bd;stroke-width:3}.out{fill:#59472a;stroke:#ffd56a;stroke-width:3}.edge{stroke:#8da4c1;stroke-opacity:.24;stroke-width:2}
@@ -20,4 +20,4 @@
 <g class="small" text-anchor="middle"><text x="440" y="590">64 neurons · ReLU</text><text x="735" y="590">64 neurons · ReLU</text></g>
 <circle class="out" cx="1030" cy="220" r="17"/><text class="small" x="1060" y="226">BERHI</text><circle class="out" cx="1030" cy="276" r="17"/><text class="small" x="1060" y="282">DEGLET</text><circle class="out" cx="1030" cy="332" r="17"/><text class="small" x="1060" y="338">DOKOL</text><circle class="out" cx="1030" cy="388" r="17"/><text class="small" x="1060" y="394">IRAQI</text><circle class="out" cx="1030" cy="444" r="17"/><text class="small" x="1060" y="450">ROTANA</text><circle class="out" cx="1030" cy="500" r="17"/><text class="small" x="1060" y="506">SAFAVI</text><circle class="out" cx="1030" cy="556" r="17"/><text class="small" x="1060" y="562">SOGAY</text>
 <text class="small" x="1030" y="622" text-anchor="middle">7 class logits</text>
-</svg>
+</g></svg>
