@@ -156,11 +156,11 @@ This is an educational ANN baseline for tabular features, not an image classifie
 
 MIT License. See [LICENSE](LICENSE).
 
-## Neural network architecture visualization
+## Detailed neural network architecture
 
-The diagram below shows the actual layer sizes implemented in `src/model.py`. Each circle represents a neuron (the date-fruit diagram shows a compact schematic subset of the 34/64-wide layers so the connections remain readable).
+<p align="center">
+  <img src="docs/ann_architecture.svg" alt="Date Fruit Classification ANN architecture showing 34 inputs, two 64-neuron hidden layers, and seven class outputs" width="100%" />
+</p>
 
-![Date Fruit Classification ANN architecture](docs/ann_architecture.svg)
-
-**Layer dimensions:** `34 inputs → 64 → 64 → 7 outputs`
+The diagram above visualizes the implemented PyTorch network. The schematic displays selected representative neurons in the wide feature and hidden layers; the layer dimensions are shown explicitly.
 
