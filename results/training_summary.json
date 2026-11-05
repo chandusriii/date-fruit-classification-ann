@@ -1,0 +1,22 @@
+{
+  "samples": 898,
+  "features": 34,
+  "classes": [
+    "BERHI",
+    "DEGLET",
+    "DOKOL",
+    "IRAQI",
+    "ROTANA",
+    "SAFAVI",
+    "SOGAY"
+  ],
+  "split_sizes": {
+    "train": 628,
+    "validation": 135,
+    "test": 135
+  },
+  "best_epoch": 26,
+  "best_validation_accuracy": 0.9481481481481482,
+  "epochs_requested": 100,
+  "seed": 42
+}
