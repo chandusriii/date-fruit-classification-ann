@@ -155,3 +155,12 @@ This is an educational ANN baseline for tabular features, not an image classifie
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## Neural network architecture visualization
+
+The diagram below shows the actual layer sizes implemented in `src/model.py`. Each circle represents a neuron (the date-fruit diagram shows a compact schematic subset of the 34/64-wide layers so the connections remain readable).
+
+![Date Fruit Classification ANN architecture](docs/ann_architecture.svg)
+
+**Layer dimensions:** `34 inputs → 64 → 64 → 7 outputs`
+
